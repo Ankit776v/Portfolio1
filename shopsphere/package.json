@@ -1,0 +1,1 @@
+{"name":"shopsphere","version":"1.0.0","private":true,"description":"Recruiter-ready full-stack ecommerce demo","scripts":{"start":"node server.js","dev":"node --watch server.js","test":"node --test"},"engines":{"node":">=22.13.0"},"dependencies":{"better-sqlite3":"^13.0.3"}}

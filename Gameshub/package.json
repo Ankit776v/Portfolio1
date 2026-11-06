@@ -1,0 +1,9 @@
+{
+  "name": "gameshub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Game stories, characters, history and spoiler-separated discussions",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "express": "^5.2.1" }
+}

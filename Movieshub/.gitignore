@@ -1,0 +1,12 @@
+node_modules/
+dist/
+artifacts/
+.env
+.env.*
+!.env.example
+*.log
+*.zip
+.DS_Store
+.vscode/
+playwright-report/
+test-results/

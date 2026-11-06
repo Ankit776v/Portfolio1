@@ -1,0 +1,374 @@
+[
+  {
+    "id": "portal",
+    "title": "Portal",
+    "year": 2007,
+    "release": "2007-10-10",
+    "developer": "Valve",
+    "genre": "Puzzle",
+    "tone": "Clinical. Curious. Unsettling.",
+    "tagline": "Think outside the test chamber.",
+    "image": "portal.jpg",
+    "accent": "#79d8ff",
+    "setting": "You are a test subject inside Aperture Science: an automated research facility built around a device that connects two points in space. A calm computer voice guides a series of increasingly demanding physics puzzles.",
+    "history": "Portal grew from the student project Narbacular Drop. Valve hired its creators and developed the idea into a compact first-person puzzle game, released with The Orange Box in 2007. Its spatial puzzles and dry humour established a new series.",
+    "timeline": [
+      [
+        "2005",
+        "Narbacular Drop",
+        "The student project establishes the linked-portal concept."
+      ],
+      [
+        "2007",
+        "Portal arrives",
+        "Released in The Orange Box, alongside Half-Life 2 content and Team Fortress 2."
+      ],
+      [
+        "2010",
+        "A bridge to the sequel",
+        "A PC update changes the closing sequence. Details are reserved for deep-dive mode."
+      ],
+      [
+        "2011",
+        "Portal 2",
+        "A sequel expands the world, puzzles, and cast."
+      ]
+    ],
+    "characters": [
+      {
+        "name": "Chell",
+        "role": "Test subject",
+        "safe": "A resourceful, silent participant navigating the facility with a portal device.",
+        "deep": "Chell survives the incinerator trap, reaches the central AI chamber, and destroys the cores attached to GLaDOS."
+      },
+      {
+        "name": "GLaDOS",
+        "role": "Facility AI",
+        "safe": "The automated voice overseeing Aperture testing and offering remarkably specific encouragement.",
+        "deep": "GLaDOS intends to dispose of Chell. Destroying her attached cores disables her body, but the closing song suggests she remains active."
+      },
+      {
+        "name": "Companion Cube",
+        "role": "Testing equipment",
+        "safe": "A weighted cube marked with hearts, used to solve one of the test chambers.",
+        "deep": "GLaDOS makes Chell incinerate the cube. The act turns an ordinary puzzle object into a test of obedience."
+      },
+      {
+        "name": "Doug Rattmann",
+        "role": "Unseen presence",
+        "safe": "Evidence of another person appears in spaces outside the polished testing areas.",
+        "deep": "His hidden warnings expose the cake promise as a deception. His larger role is explored in the later Lab Rat comic."
+      }
+    ],
+    "story": [
+      [
+        "The test begins",
+        "Chell wakes in an Aperture relaxation chamber. GLaDOS introduces increasingly hazardous tests, while the portal gun lets Chell redirect momentum, cross gaps, and manipulate the environment."
+      ],
+      [
+        "Behind the walls",
+        "Maintenance spaces reveal warnings from an earlier inhabitant. GLaDOS rewards obedience with promises of cake and makes Chell destroy the Companion Cube, exposing the cruelty beneath the polite instructions."
+      ],
+      [
+        "The escape",
+        "The final test routes Chell toward an incinerator. She uses portals to avoid death, leaves the approved course, and crosses the facility behind the test chambers while GLaDOS tries to persuade her to return."
+      ],
+      [
+        "The confrontation",
+        "Chell reaches GLaDOS. A detached personality core is destroyed; GLaDOS then releases neurotoxin. Chell redirects rockets and incinerates the remaining cores before the timer runs out."
+      ],
+      [
+        "The ending",
+        "The destruction pulls Chell and debris to the surface. In the updated ending, a robot drags her back into the facility. A final room contains a cake and the Companion Cube, and the closing song suggests GLaDOS has survived in some form."
+      ]
+    ],
+    "sources": [
+      [
+        "Official game page",
+        "https://store.steampowered.com/app/400/Portal/",
+        "safe"
+      ],
+      [
+        "Story reference (spoilers)",
+        "https://theportalwiki.com/wiki/Story",
+        "deep"
+      ],
+      [
+        "Development and plot reference (spoilers)",
+        "https://en.wikipedia.org/wiki/Portal_(video_game)",
+        "deep"
+      ]
+    ]
+  },
+  {
+    "id": "portal-2",
+    "title": "Portal 2",
+    "year": 2011,
+    "release": "2011-04-18",
+    "developer": "Valve",
+    "genre": "Puzzle",
+    "tone": "Bigger questions. Older secrets.",
+    "tagline": "There is more beneath the surface.",
+    "image": "portal-2.jpg",
+    "accent": "#b7ed7a",
+    "setting": "Return to a vast, deteriorating Aperture facility. New testing tools include light bridges, lasers, and experimental gels. The single-player campaign follows Chell; a separate co-op campaign follows two purpose-built robots.",
+    "history": "The 2011 sequel expands Portal into a longer adventure with new puzzle systems, an extensive single-player story, and a separate two-player campaign. The Perpetual Testing Initiative later added community puzzle creation on PC.",
+    "timeline": [
+      [
+        "2007",
+        "The first Portal",
+        "Introduces Aperture and the portal device."
+      ],
+      [
+        "2011",
+        "Portal 2",
+        "Single-player and co-op campaigns expand the laboratory."
+      ],
+      [
+        "2012",
+        "Perpetual Testing Initiative",
+        "Community puzzle creation broadens the PC game."
+      ]
+    ],
+    "characters": [
+      {
+        "name": "Chell",
+        "role": "Returning test subject",
+        "safe": "A determined human explorer working through another set of Aperture challenges.",
+        "deep": "Chell survives Wheatley, restores GLaDOS, and uses a portal on the Moon during the final confrontation."
+      },
+      {
+        "name": "Wheatley",
+        "role": "Personality core",
+        "safe": "A talkative mobile core who helps navigate the neglected facility.",
+        "deep": "After taking control, Wheatley refuses to free Chell and destabilises the facility. He is ultimately stranded in space."
+      },
+      {
+        "name": "GLaDOS",
+        "role": "Aperture AI",
+        "safe": "A central intelligence with a complicated relationship to testing and its participants.",
+        "deep": "Wheatley transfers her to a potato battery. Working with Chell, she recognises her connection to Caroline and later regains control."
+      },
+      {
+        "name": "Cave Johnson",
+        "role": "Aperture founder",
+        "safe": "The founder whose recorded announcements introduce the company's earlier experiments.",
+        "deep": "His recordings trace Aperture's decline and his failing health. He orders a transfer of human consciousness into a computer, naming Caroline as the substitute if needed."
+      },
+      {
+        "name": "Caroline",
+        "role": "Aperture assistant",
+        "safe": "A colleague heard in the recordings of Aperture's earlier years.",
+        "deep": "GLaDOS recognises Caroline as part of her own origin. Her final claims about deleting Caroline should be read alongside the deliberately ambiguous farewell."
+      },
+      {
+        "name": "ATLAS",
+        "role": "Co-op testing robot",
+        "safe": "The rounder member of Aperture's two-robot cooperative testing team.",
+        "deep": "Together with P-body, ATLAS reaches a vault of human test subjects in the co-op campaign."
+      },
+      {
+        "name": "P-body",
+        "role": "Co-op testing robot",
+        "safe": "The taller partner in the cooperative campaign, designed to solve tests with ATLAS.",
+        "deep": "The pair opens the human vault for GLaDOS; their success gives her new subjects for testing."
+      },
+      {
+        "name": "Turrets",
+        "role": "Automated defence",
+        "safe": "Soft-spoken machines that provide a very direct obstacle to progress.",
+        "deep": "A turret production line becomes part of Chell and Wheatley's sabotage. A turret choir appears during Chell's final departure."
+      }
+    ],
+    "story": [
+      [
+        "An unexpected awakening",
+        "Wheatley wakes Chell in a decaying facility. Their escape attempt accidentally reactivates GLaDOS, who resumes testing Chell while rebuilding Aperture."
+      ],
+      [
+        "A change of control",
+        "Chell and Wheatley sabotage turret production and the neurotoxin system. They replace GLaDOS with Wheatley, but control of the facility corrupts him. He puts GLaDOS in a potato battery and drops both her and Chell into old Aperture."
+      ],
+      [
+        "The buried laboratory",
+        "Chell explores historical testing areas and hears Cave Johnson and Caroline in recordings. Gels provide new ways to solve puzzles. Chell and GLaDOS cooperate, and GLaDOS recognises Caroline's connection to her identity."
+      ],
+      [
+        "The return",
+        "They reach Wheatley's increasingly unstable test chambers. When he attempts to kill them, they escape toward his control room and use defective cores to initiate another transfer."
+      ],
+      [
+        "The Moon and the surface",
+        "With the facility breaking apart, Chell fires a portal onto the Moon. Wheatley is pulled into space, and GLaDOS rescues Chell and regains control. She releases Chell to a wheat field, followed by the Companion Cube. Wheatley remains in space, expressing regret."
+      ],
+      [
+        "The co-op campaign",
+        "Separately, ATLAS and P-body solve GLaDOS's cooperative tests and open a vault containing human test subjects. Their campaign has its own events and is not Chell's ending."
+      ]
+    ],
+    "sources": [
+      [
+        "Official game page",
+        "https://store.steampowered.com/app/620/Portal_2/",
+        "safe"
+      ],
+      [
+        "Series story reference (spoilers)",
+        "https://theportalwiki.com/wiki/Story",
+        "deep"
+      ],
+      [
+        "Story and ending reference (spoilers)",
+        "https://en.wikipedia.org/wiki/Portal_2",
+        "deep"
+      ]
+    ]
+  },
+  {
+    "id": "half-life-2",
+    "title": "Half-Life 2",
+    "year": 2004,
+    "release": "2004-11-16",
+    "developer": "Valve",
+    "genre": "Action",
+    "tone": "A familiar face. An unfamiliar world.",
+    "tagline": "Rise and shine, explorer.",
+    "image": "half-life-2.jpg",
+    "accent": "#ffad70",
+    "setting": "Gordon Freeman arrives in City 17, a city under the control of the alien Combine. Citizens live under surveillance, while a scattered resistance works with improvised technology. The journey mixes exploration, physics-based puzzles, and combat.",
+    "history": "Released in 2004, Half-Life 2 introduced Valve's Source engine and made physics central to both action and environmental storytelling. Episode One and Episode Two continued its narrative; those later stories are outside this game's synopsis.",
+    "timeline": [
+      [
+        "1998",
+        "Half-Life",
+        "Gordon Freeman's story begins at Black Mesa."
+      ],
+      [
+        "2004",
+        "Half-Life 2",
+        "City 17 introduces a changed Earth and a new resistance."
+      ],
+      [
+        "2006",
+        "Episode One",
+        "A separate follow-up continues after the main game."
+      ],
+      [
+        "2007",
+        "Episode Two",
+        "The episodic story continues beyond City 17."
+      ]
+    ],
+    "characters": [
+      {
+        "name": "Gordon Freeman",
+        "role": "Physicist",
+        "safe": "The silent protagonist, known to several members of the resistance from Black Mesa.",
+        "deep": "His arrival helps catalyse the City 17 uprising. He destroys the Citadel's dark-fusion reactor before the G-Man intervenes."
+      },
+      {
+        "name": "Alyx Vance",
+        "role": "Resistance engineer",
+        "safe": "A skilled engineer and resistance fighter who helps Gordon navigate the occupied world.",
+        "deep": "She helps infiltrate Nova Prospekt, discovers Mossman's collaboration, and joins Gordon in the Citadel finale."
+      },
+      {
+        "name": "Eli Vance",
+        "role": "Resistance scientist",
+        "safe": "A former Black Mesa scientist and a leader of the resistance.",
+        "deep": "The Combine captures Eli. Mossman ultimately helps release him from Breen's control."
+      },
+      {
+        "name": "Isaac Kleiner",
+        "role": "Scientist",
+        "safe": "A researcher developing teleportation technology for the resistance.",
+        "deep": "His faulty teleport briefly exposes Gordon to Breen; he later assists the rebels during the uprising."
+      },
+      {
+        "name": "Barney Calhoun",
+        "role": "Undercover ally",
+        "safe": "A familiar friend operating within City 17's security apparatus.",
+        "deep": "Barney protects Gordon at the station and later fights openly with the resistance."
+      },
+      {
+        "name": "Judith Mossman",
+        "role": "Researcher",
+        "safe": "A scientist working alongside Eli on resistance research.",
+        "deep": "She collaborates with Breen, but turns against him when Eli is threatened and helps free the prisoners."
+      },
+      {
+        "name": "Wallace Breen",
+        "role": "Administrator",
+        "safe": "The human face of Combine authority, visible in official broadcasts.",
+        "deep": "Breen tries to escape through a portal in the Citadel. Gordon destroys the reactor that powers his escape."
+      },
+      {
+        "name": "Dog",
+        "role": "Robotic companion",
+        "safe": "A large robot built to assist and protect Alyx.",
+        "deep": "Dog helps Gordon reach the Citadel during the uprising."
+      },
+      {
+        "name": "Father Grigori",
+        "role": "Ravenholm survivor",
+        "safe": "A survivor who knows the hazards of the abandoned settlement.",
+        "deep": "He guides Gordon through Ravenholm and remains behind as Gordon escapes."
+      },
+      {
+        "name": "G-Man",
+        "role": "Mysterious observer",
+        "safe": "A suited figure connected to Gordon's unusual arrival.",
+        "deep": "He freezes the Citadel explosion and removes Gordon from events at the ending. His motives remain unresolved."
+      },
+      {
+        "name": "Vortigaunts",
+        "role": "Alien allies",
+        "safe": "An alien species with members who assist the human resistance.",
+        "deep": "They support Gordon's journey and help him command antlions after the antlion guard encounter."
+      }
+    ],
+    "story": [
+      [
+        "Arrival in City 17",
+        "The G-Man returns Gordon to a world occupied by the Combine. Barney helps him escape detention, Alyx introduces him to the resistance, and Kleiner's failed teleport forces him to take an overland route to Eli's laboratory."
+      ],
+      [
+        "A journey through occupied Earth",
+        "Gordon escapes along the canals and reaches Black Mesa East, where Alyx and Dog introduce the gravity gun. A Combine attack separates the allies, and Gordon crosses the headcrab-infested Ravenholm with Grigori's help."
+      ],
+      [
+        "Nova Prospekt",
+        "After travelling the coast and gaining control of antlions, Gordon attacks Nova Prospekt to rescue Eli. Alyx learns that Mossman has been working with Breen. Mossman teleports Eli to the Citadel; Gordon and Alyx escape through another teleport."
+      ],
+      [
+        "The uprising",
+        "The return teleport takes a week. During their absence, a major revolt begins in City 17. Gordon fights alongside rebels and Barney, while Alyx is captured and taken to the Citadel."
+      ],
+      [
+        "Inside the Citadel",
+        "Gordon enters the tower, where a confiscation device supercharges his gravity gun. Breen holds Alyx and Eli, but Mossman turns against him and frees them. Breen flees toward a portal powered by the dark-fusion reactor."
+      ],
+      [
+        "The ending",
+        "Gordon destroys the reactor and stops Breen's escape. As the explosion threatens Gordon and Alyx, the G-Man freezes time and removes Gordon. The fate of the city and Alyx is left for the separate episodic sequels."
+      ]
+    ],
+    "sources": [
+      [
+        "Official game page",
+        "https://store.steampowered.com/app/220/HalfLife_2/",
+        "safe"
+      ],
+      [
+        "Chapter-by-chapter reference (spoilers)",
+        "https://combineoverwiki.net/wiki/Half-Life_2_storyline",
+        "deep"
+      ],
+      [
+        "Development and story reference (spoilers)",
+        "https://en.wikipedia.org/wiki/Half-Life_2",
+        "deep"
+      ]
+    ]
+  }
+]

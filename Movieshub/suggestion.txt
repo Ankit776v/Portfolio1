@@ -1,0 +1,7 @@
+Display: 6.83-inch AMOLED display with a 165Hz refresh rate and 1.5K resolution (2800 × 1272 pixels). 
+Processor: Qualcomm Snapdragon 8 Gen 5 (3 nm) with OP Gaming Core engine. 
+RAM & Storage: 12GB or 16GB LPDDR5X RAM with up to 512GB UFS 4.1 storage. 
+Battery & Charging: 7,400mAh Si/C battery with 80W SUPERVOOC fast charging and Bypass Charging. 
+Cameras: Dual rear setup featuring a 50MP Sony IMX906 primary camera (with OIS) and an 8MP ultra-wide lens, plus a 32MP front selfie camera. 
+Durability: IP66, IP68, IP69, and IP69K dust and water resistance ratings. 
+Software: OxygenOS 16 based on Android 16, integrated with Google Gemini and Plus Mind.

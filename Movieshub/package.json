@@ -1,0 +1,21 @@
+{
+  "name": "movieshub",
+  "private": true,
+  "scripts": {
+    "start": "npm --prefix client run build && npm --prefix server start",
+    "lint": "npm --prefix client run lint",
+    "build": "npm --prefix client run build",
+    "test": "npm --prefix server test",
+    "test:integration": "node scripts/integration.cjs",
+    "package": "node scripts/package.cjs",
+    "demo": "node scripts/demo.cjs"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "google-auth-library": "^11.0.2",
+    "mongoose": "^9.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

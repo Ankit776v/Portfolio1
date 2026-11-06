@@ -1,0 +1,9 @@
+node_modules/
+.npm-cache/
+.env
+data/
+**/*.sqlite
+**/*.sqlite-shm
+**/*.sqlite-wal
+**/uploads/
+**/product-images/

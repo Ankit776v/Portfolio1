@@ -1,0 +1,15 @@
+**/node_modules
+.npm-cache
+**/.git
+**/.env
+**/.env.*
+!**/.env.example
+**/dist
+**/*.sqlite*
+**/data
+**/uploads
+**/product-images
+**/.agents
+**/.codex
+**/docs/screenshots
+**/docs/*.webm
