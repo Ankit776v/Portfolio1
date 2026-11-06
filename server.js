@@ -31,7 +31,7 @@ function scopeCookies(base) {
 
 async function createPortfolio({ database, env = process.env, startCatalogue = true } = {}) {
   const port = Number(env.PORT || 3000);
-  const origin = env.PUBLIC_ORIGIN || `http://localhost:${port}`;
+  const origin = env.PUBLIC_ORIGIN || `https://portfolio1-utck.onrender.com`;
   const networkOrigins = env.NODE_ENV === 'production' ? [] : require('./scripts/local-network.cjs').localOrigins(port);
   if (new URL(origin).origin !== origin) throw new Error('PUBLIC_ORIGIN must be an exact origin without a trailing slash.');
   if (!env.JWT_SECRET || env.JWT_SECRET.length < 32) throw new Error('Set JWT_SECRET to a random value of at least 32 characters in .env.');
