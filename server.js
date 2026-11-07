@@ -31,7 +31,10 @@ function scopeCookies(base) {
 
 async function createPortfolio({ database, env = process.env, startCatalogue = true } = {}) {
   const port = Number(env.PORT || 3000);
-  const origin = env.PUBLIC_ORIGIN || `http://localhost:${port}`;
+  // Render provides its own canonical HTTPS URL, so deployments do not need
+  // a manually maintained PUBLIC_ORIGIN value. Keep the explicit override for
+  // custom domains and localhost for local development.
+  const origin = env.PUBLIC_ORIGIN || env.RENDER_EXTERNAL_URL || `http://localhost:${port}`;
   const networkOrigins = env.NODE_ENV === 'production' ? [] : require('./scripts/local-network.cjs').localOrigins(port);
   if (new URL(origin).origin !== origin) throw new Error('PUBLIC_ORIGIN must be an exact origin without a trailing slash.');
   if (!env.JWT_SECRET || env.JWT_SECRET.length < 32) throw new Error('Set JWT_SECRET to a random value of at least 32 characters in .env.');

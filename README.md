@@ -87,32 +87,43 @@ page cannot connect, check that your Wi-Fi does not isolate devices and that
 TCP port 3000 (or your configured `PORT`) is allowed on the private network.
 Production keeps its configured HTTPS origin checks.
 
-## Deploy once
+## Deploy on Render
 
-Deploy the **entire Portfolio directory** as one Node web service, or build the
-included `Dockerfile`. Static-only hosting such as GitHub Pages cannot run these
-backends. Deployment files are provided; no live service has been created.
+Deploy the **entire Portfolio repository** as one Render Web Service using the
+root `render.yaml` Blueprint, or configure a Web Service to use the included
+`Dockerfile`. Static-only hosting such as GitHub Pages cannot run these
+backends. In Render, choose **New + → Blueprint**, connect this repository, and
+provide `MONGODB_URI` when prompted. The Blueprint generates `JWT_SECRET`, uses
+Render's HTTPS service URL automatically, and checks `/healthz`.
 
-- Build command: `npm ci && npm run build`
-- Start command: `npm start`
-- Node version: 24
-- Health check: `/healthz`
-- One persistent disk, e.g. mounted at `/data`
+For a manually configured Docker Web Service, use the repository root and set
+`NODE_ENV=production`, `MONGODB_URI`, and a random `JWT_SECRET` of at least 32
+characters. `PUBLIC_ORIGIN` is optional on Render because the server reads
+`RENDER_EXTERNAL_URL`; set `PUBLIC_ORIGIN` only when using a custom domain. Add
+`TMDB_API_KEY` for live Movieshub catalogues and `RAWG_API_KEY` / IGDB credentials
+for Gameshub provider features.
 
-Set these hosting environment variables:
+The service listens on Render's injected `PORT` and `0.0.0.0`. Render Free
+services have temporary filesystems and no persistent disk, so local SQLite
+databases and uploaded files can reset after restarts or sleep. Attach a
+persistent disk mounted at `/data` on a plan that supports disks if you need
+those files to survive.
+
+Set these hosting environment variables for other providers as needed:
 
 ```text
 NODE_ENV=production
-PUBLIC_ORIGIN=https://your-portfolio-domain.example
-PORTFOLIO_DATA_DIR=/data
+PUBLIC_ORIGIN=https://your-domain.example
 MONGODB_URI=<your MongoDB Atlas connection string>
 JWT_SECRET=<random value of at least 32 characters>
 TMDB_API_KEY=<your TMDB API key>
+# Only when the host provides persistent storage mounted at /data:
+PORTFOLIO_DATA_DIR=/data
 ```
 
-Your host supplies `PORT`; the server listens on `0.0.0.0`. `PUBLIC_ORIGIN` must
-be the real HTTPS origin without a trailing slash. The five project links use
-that domain automatically. The host must support WebSockets for ConnectHub chat.
+For hosts other than Render, set `PUBLIC_ORIGIN` to the real HTTPS origin
+without a trailing slash. The five project links use that domain automatically.
+The host must support WebSockets for ConnectHub chat.
 
 For Docker, build with `docker build -t ankitflix .`. Run the image with the same
 environment variables, a persistent volume mounted at `/data`, and port 3000
