@@ -39,7 +39,7 @@ body>.App .Navbar,#root>.App .Navbar{top:0}
 .featured-meta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;font-size:12px;color:#d0d0d0;margin-bottom:16px}
 .featured-rating{color:#58cf83;font-weight:700}
 .featured-quality{border:1px solid #999;font-size:10px;padding:0 4px;border-radius:2px}
-.featured-description{font-size:15px;line-height:1.65;max-width:490px;color:#e5e5e5;margin-bottom:26px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-shadow:0 1px 5px #000}
+.featured-description{font-size:15px;line-height:1.65;max-width:490px;color:#e5e5e5;margin-bottom:26px;display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-shadow:0 1px 5px #000}
 .featured-actions{display:flex;gap:12px;flex-wrap:wrap}
 .App .featured-actions>a{display:inline-flex;align-items:center;justify-content:center;gap:12px;border-radius:4px;padding:12px 25px;font-size:16px;font-weight:750;min-height:48px;transition:background .2s}
 .App .featured-actions .featured-play{background:#fff;color:#141414}
@@ -78,7 +78,7 @@ body>.App .Navbar,#root>.App .Navbar{top:0}
 .App .HomeMovie .cards>a{width:174px}
 .App .HomeMovie .cards .card{height:328px;aspect-ratio:auto}
 .App .HomeMovie .cards .cardimg{width:174px;height:261px;aspect-ratio:auto;flex:0 0 261px}
-.App .HomeMovie .cards .card span{height:48px;min-height:48px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;white-space:normal}
+.App .HomeMovie .cards .card span{height:48px;min-height:48px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;white-space:normal}
 .App .HomeMovie .cards .card small.release-date{display:block;flex:0 0 19px;height:19px;padding:0 10px 7px;color:#a3a3a3;font-size:10px;line-height:12px;overflow:hidden}
 .App .browse-section{background:#141414;padding:36px 4%;width:100%;max-width:none}
 .App .catalogue-filters{background:#202020;border:1px solid #333;border-radius:5px;color:#ddd}
@@ -108,7 +108,7 @@ body>.App .Navbar,#root>.App .Navbar{top:0}
 @keyframes hero-reveal{from{opacity:.5;transform:scale(1.025)}to{opacity:1;transform:scale(1)}}
 @media(min-width:1800px){.App .live-movie-row>a{flex-basis:210px}.App .live-movie-row .cardimg{height:315px;flex-basis:315px}}
 @media(max-width:1100px){.App .Navbar{gap:20px}.movie-navlinks{gap:15px;font-size:12px}.movie-search{width:165px}.movie-user{gap:10px}.movie-browse{display:none}.featured-hero{min-height:560px}.featured-copy{max-width:500px}}
-@media(max-width:760px){.App .Navbar{height:auto;min-height:108px;padding:16px 5%;display:grid;grid-template-columns:1fr auto;gap:14px}.App .movie-wordmark{font-size:23px}.movie-user{grid-column:2;grid-row:1}.movie-navlinks{grid-row:2;grid-column:1;font-size:11px;gap:16px}.movie-search{grid-row:3;grid-column:1/-1;width:100%;height:32px}.featured-hero{height:auto;min-height:560px;padding:65px 5% 110px}.featured-copy{max-width:90%}.App .featured-copy h1{font-size:clamp(38px,9vw,64px)}.featured-description{font-size:13px;-webkit-line-clamp:3}.featured-meta{font-size:10px;gap:10px}.featured-side{display:none}.App .featured-actions>a{font-size:13px;padding:11px 20px;min-height:42px}.App .HomeMovie{padding:0 4% 35px}.featured-hero+.HomeMovie{margin-top:-55px}.App .section-heading h2,.App .section-heading h3{font-size:17px}.App .live-movie-row>a{flex-basis:135px}.App .live-movie-row .cardimg{height:202.5px;flex-basis:202.5px}.App .movie-row-controls{grid-template-columns:22px minmax(0,1fr) 22px;gap:4px}.App .live-sections .movie-row-arrow{width:22px;font-size:18px;height:60px}.App .card span{font-size:11px;min-height:44px}.App .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.App .form{padding:25px}.App .featured-caption{font-size:8px}.App .catalogue-group-heading{margin-bottom:18px}}
+@media(max-width:760px){.App .Navbar{height:auto;min-height:108px;padding:16px 5%;display:grid;grid-template-columns:1fr auto;gap:14px}.App .movie-wordmark{font-size:23px}.movie-user{grid-column:2;grid-row:1}.movie-navlinks{grid-row:2;grid-column:1;font-size:11px;gap:16px}.movie-search{grid-row:3;grid-column:1/-1;width:100%;height:32px}.featured-hero{height:auto;min-height:560px;padding:65px 5% 110px}.featured-copy{max-width:90%}.App .featured-copy h1{font-size:clamp(38px,9vw,64px)}.featured-description{font-size:13px;-webkit-line-clamp:3;line-clamp:3}.featured-meta{font-size:10px;gap:10px}.featured-side{display:none}.App .featured-actions>a{font-size:13px;padding:11px 20px;min-height:42px}.App .HomeMovie{padding:0 4% 35px}.featured-hero+.HomeMovie{margin-top:-55px}.App .section-heading h2,.App .section-heading h3{font-size:17px}.App .live-movie-row>a{flex-basis:135px}.App .live-movie-row .cardimg{height:202.5px;flex-basis:202.5px}.App .movie-row-controls{grid-template-columns:22px minmax(0,1fr) 22px;gap:4px}.App .live-sections .movie-row-arrow{width:22px;font-size:18px;height:60px}.App .card span{font-size:11px;min-height:44px}.App .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.App .form{padding:25px}.App .featured-caption{font-size:8px}.App .catalogue-group-heading{margin-bottom:18px}}
 @media(prefers-reduced-motion:reduce){.App *,.App *:before,.App *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
 /* A single episode panel controlled by horizontal season tabs. */
@@ -126,7 +126,7 @@ body>.App .Navbar,#root>.App .Navbar{top:0}
 .App .season-episode-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:18px}
 .App .season-episode-link{display:block;border-radius:5px;transition:background .15s}
 .App .season-episode-watch-links{margin:0}
-.App .watch-links-content{height:auto;justify-content:flex-start}
+.App .watch-links-content{height:auto;justify-content:space-evenly}
 .App .watch-link-button{display:inline-block;padding:0.7rem 1rem;border:0;border-radius:6px;background:#FEA12E;color:#111;font:inherit;font-weight:700;cursor:pointer}
 .App .watch-link-button:hover{background:#ffb64d;color:#111}
 .App .watch-embed{position:relative;flex:1 0 100%;width:min(100%,900px);aspect-ratio:16/9;overflow:hidden;border-radius:5px;background:#000}
@@ -147,6 +147,6 @@ body>.App .Navbar,#root>.App .Navbar{top:0}
 .App .season-episode-copy h3{font-size:18px;font-weight:700;color:#f5f5f5;margin:0 0 8px;line-height:1.35}
 .App .season-episode-meta{font-size:14px;font-weight:650;color:#929aaf;margin:0 0 12px;line-height:1.5}
 .App .season-episode-overview{font-size:14px;font-weight:400;color:#939aaf;line-height:1.6;margin:0;overflow-wrap:anywhere}
-@media(max-width:650px){.App .season-browser{padding:8px 12px 20px}.App .season-tabs{gap:23px}.App .season-tabs [role=tab]{font-size:14px}.App .season-episode-row{grid-template-columns:1fr;gap:8px}.App .season-episode{grid-template-columns:minmax(105px,34%) minmax(0,1fr);gap:14px}.App .season-episode-copy{padding:0}.App .season-episode-copy h3{font-size:14px;margin-bottom:5px}.App .season-episode-meta{font-size:11px;margin-bottom:7px}.App .season-episode-overview{font-size:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.App .season-episode-list{gap:22px}}
+@media(max-width:650px){.App .season-browser{padding:8px 12px 20px}.App .season-tabs{gap:23px}.App .season-tabs [role=tab]{font-size:14px}.App .season-episode-row{grid-template-columns:1fr;gap:8px}.App .season-episode{grid-template-columns:minmax(105px,34%) minmax(0,1fr);gap:14px}.App .season-episode-copy{padding:0}.App .season-episode-copy h3{font-size:14px;margin-bottom:5px}.App .season-episode-meta{font-size:11px;margin-bottom:7px}.App .season-episode-overview{font-size:12px;display:-webkit-box;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.App .season-episode-list{gap:22px}}
 
 .App .brand-movies{color:#398bff}.App .brand-hub{color:#fff}.App .movie-wordmark:hover .brand-movies{color:#70aaff}
