@@ -58,9 +58,10 @@ async function createPortfolio({ database, env = process.env, startCatalogue = t
   const movieRequire = createRequire(path.join(__dirname, 'Movieshub/server/package.json'));
   const mongoose = database || movieRequire('mongoose');
   if (!database) {
-    const mongoUri = env.MONGODB_URI?.trim();
+    const mongoUri = process.env.MONGODB_URI;
     if (!mongoUri) {
-      throw new Error('MONGODB_URI is missing. Add it to the Render service environment (or .env locally), then restart the service.');
+      console.error("MONGODB_URI is missing.");
+      process.exit(1);
     }
     if (!/^mongodb(?:\+srv)?:\/\//i.test(mongoUri)) {
       throw new Error('MONGODB_URI must start with mongodb:// or mongodb+srv://.');
@@ -68,7 +69,7 @@ async function createPortfolio({ database, env = process.env, startCatalogue = t
     try {
       await mongoose.connect(mongoUri, { serverSelectionTimeoutMS: 15000 });
     } catch (error) {
-      const reason = error?.message ? ` Details: ${error.message}` : '';
+      const reason = error?.message? ` Details: ${error.message}` : '';
       throw new Error(`Could not connect to MongoDB Atlas. Check the cluster host, database user/password, and Atlas Network Access IP allowlist. If the password contains special characters, URL-encode it.${reason}`);
     }
   }
