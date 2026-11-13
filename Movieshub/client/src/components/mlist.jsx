@@ -3421,6 +3421,7 @@ const mList = [
   {
     title: "Omkara (2006)",
     categories: "movie",
+    poster_path: "/w2woWizl8q6gbM6NbbPGNe6qagQ.jpg",
   },
   {
     title: "Anthony Kaun Hai? (2006)",
@@ -12315,6 +12316,10 @@ const mList = [
     categories: "movie",
   },
   {
+    title: "RRR (2022)",
+    categories: "movie",
+  },
+  {
     title: "Moon Knight (2022)",
     categories: "series",
     seasons: [
@@ -14429,6 +14434,12 @@ const mList = [
   {
     title: "Thunderbolts* (2025)",
     categories: "movie",
+    universe: "Marvel-Cinematic-Universe",
+    links: [
+      {
+        link: "https://www.hotstar.com/in/movies/thunderbolts/1271337437/watch",
+      }
+    ]
   },
   {
     title: "The Networker (2025)",
@@ -15421,6 +15432,9 @@ const mList = [
     universe: "Marvel-Cinematic-Universe",
     poster_path: "/v9woqSybUGz67qwHMR0LX7A6Pl8.jpg",
     back_poster: "/ajPWiu3UcDycd6Dg3Zyj2g0nvhv.jpg",
+    links: {
+      link: "https://www.hotstar.com/in/movies/avengers-endgame-encore/1271685555/watch",
+    }
   },
   {
     title: "Mahakavya: Shri Ramayan Katha (2026)",
@@ -15452,6 +15466,10 @@ const mList = [
   },
   {
     title: "Reporting Live (2026)",
+    categories: "movie",
+  },
+  {
+    title: "Apocalypse Z: New World (2026)",
     categories: "movie",
   },
   {
@@ -15527,6 +15545,16 @@ const mList = [
   {
     title: "Pratap (2026)",
     categories: "movie",
+  },
+  {
+    title: "Blade Runner 2099 (2026)",
+    categories: "series",
+    seasons: [
+      {
+        season: 1,
+        seasonid: 1
+      }
+    ]
   },
   {
     title: "Gunmaaster G9 (2026)",

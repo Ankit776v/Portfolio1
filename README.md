@@ -96,6 +96,23 @@ backends. In Render, choose **New + → Blueprint**, connect this repository, an
 provide `MONGODB_URI` when prompted. The Blueprint generates `JWT_SECRET`, uses
 Render's HTTPS service URL automatically, and checks `/healthz`.
 
+For an existing Render service, open **Dashboard → your service → Environment**
+and add or update the key `MONGODB_URI` with the Atlas connection string. Use the
+Atlas **Connect → Drivers** URI, replace `<db_password>` with the database user's
+password, and set the database name to `movieshub` (for example,
+`mongodb+srv://USER:PASSWORD@cluster.example.mongodb.net/movieshub`). Save the
+environment change and redeploy/restart the service. Do not commit the Atlas URI
+to the repository or put it in `render.yaml`.
+
+In MongoDB Atlas, create a **database user** (this is separate from your Atlas
+website login) and allow Render to reach the cluster under **Security → Network
+Access**. In Render, open the service's **Connect → Outbound** details and add
+the listed IP ranges to the Atlas IP access list. Render's outbound ranges are
+region-specific and can change; avoid `0.0.0.0/0` where possible because it
+allows attempts from any public IP. Keep the database user's password
+URL-encoded in the URI if it contains characters such as `@`, `:`, `/`, `?`, or
+`#`.
+
 For a manually configured Docker Web Service, use the repository root and set
 `NODE_ENV=production`, `MONGODB_URI`, and a random `JWT_SECRET` of at least 32
 characters. `PUBLIC_ORIGIN` is optional on Render because the server reads

@@ -52,12 +52,12 @@ function Page() {
     const location = useLocation();
     const { profile } = useAccount();
     const movie = useMemo(() => {
-      if (tmdbId && ['movie','tv'].includes(mediaType) && /^\d+$/.test(tmdbId)) {
-        const matches = mlist.filter(i => String(i.tmdbid ?? i.tmdbId ?? i.id) === tmdbId && getSearchEndpoint(getMovieCategory(i)) === mediaType);
-        return matches.length === 1 ? matches[0] : { id: Number(tmdbId), title: '', categories: mediaType, live: true };
-      }
-      return mlist[Number(movieIndex)];
-    }, [movieIndex,mediaType,tmdbId]);
+        if (tmdbId && ['movie', 'tv'].includes(mediaType) && /^\d+$/.test(tmdbId)) {
+            const matches = mlist.filter(i => String(i.tmdbid ?? i.tmdbId ?? i.id) === tmdbId && getSearchEndpoint(getMovieCategory(i)) === mediaType);
+            return matches.length === 1 ? matches[0] : { id: Number(tmdbId), title: '', categories: mediaType, live: true };
+        }
+        return mlist[Number(movieIndex)];
+    }, [movieIndex, mediaType, tmdbId]);
     const episodeMovieIndex = movieIndex ?? mlist.indexOf(movie);
     const [tmdbMovie, setTmdbMovie] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
@@ -652,8 +652,8 @@ function Page() {
         );
     }
 
-    if (profile?.kids && (!tmdbMovie || tmdbMovie.adult || !tmdbMovie.genres?.some(g => [10751,10762,16].includes(g.id)))) {
-      return <main className="account-page"><h1>Family catalogue</h1><p>{isLoading ? 'Checking title details…' : tmdbMovie ? 'This title is outside the family genre filter.' : 'Could not verify this title for the family filter.'}</p><Link to="/">Browse family movies</Link></main>;
+    if (profile?.kids && (!tmdbMovie || tmdbMovie.adult || !tmdbMovie.genres?.some(g => [10751, 10762, 16].includes(g.id)))) {
+        return <main className="account-page"><h1>Family catalogue</h1><p>{isLoading ? 'Checking title details…' : tmdbMovie ? 'This title is outside the family genre filter.' : 'Could not verify this title for the family filter.'}</p><Link to="/">Browse family movies</Link></main>;
     }
     const movieLinks = Array.isArray(movie.links)
         ? movie.links.map((entry, index) => [entry?.name || entry?.platform || index, typeof entry === "string" ? entry : entry?.link || entry?.url])
@@ -684,15 +684,25 @@ function Page() {
                         />
                     )}
                 </div>
-                <TitleActions item={tmdbMovie ? { id:Number(tmdbMovie.id), type:getResultEndpoint(tmdbMovie), title:tmdbMovie.title || tmdbMovie.name || movie.title, poster:tmdbMovie.poster_path } : null} />
+                <TitleActions item={tmdbMovie ? { id: Number(tmdbMovie.id), type: getResultEndpoint(tmdbMovie), title: tmdbMovie.title || tmdbMovie.name || movie.title, poster: tmdbMovie.poster_path } : null} />
                 {overview && <p className="movie-about">Plot -{overview}</p>}
                 {release_date && <p className="movie-about">Release date -{release_date} </p>}
                 {isLoading && <p className="tmdb-status">Loading movie details</p>}
+
+                {links.length > 0 && (
+                    <section className="movie-section">
+                        <div className="watch-links watch-links-content">
+                            {links.map(([name, url], index) => (
+                                <WatchLink key={`${name}:${url}`} url={url} title={movie.title} label={index === 0 ? "Watch Now" : `Watch option ${index + 1}`} />
+                            ))}
+                        </div>
+                    </section>
+                )}
             </section>
 
             <section className="movie-section reviews-section" aria-busy={reviewsLoading}>
                 <div className="reviews-heading"><h2>Reviews</h2><span>{reviewScope === reviewKey ? `${reviewStats.total} reviews${reviewStats.averageRating !== null ? ` · ${reviewStats.averageRating.toFixed(1)} / 5` : ""}` : "Loading ratings..."}</span></div>
-                <label className="review-sort">Sort reviews<select value={reviewSort} onChange={event => { setReviewSort(event.target.value); setReviewPage(1); }}>{[['newest','Newest first'],['oldest','Oldest first'],['highest','Highest rated'],['lowest','Lowest rated']].map(([value,label]) => <option key={value} value={value}>{label}</option>)}</select></label>
+                <label className="review-sort">Sort reviews<select value={reviewSort} onChange={event => { setReviewSort(event.target.value); setReviewPage(1); }}>{[['newest', 'Newest first'], ['oldest', 'Oldest first'], ['highest', 'Highest rated'], ['lowest', 'Lowest rated']].map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></label>
                 {user ? (
                     <form className="review-form" onSubmit={submitReview}>
                         <label>Rating<select value={reviewRating} onChange={(event) => setReviewRating(event.target.value)} aria-label="Your rating">{[5, 4, 3, 2, 1].map((rating) => <option value={rating} key={rating}>{rating} star{rating === 1 ? "" : "s"}</option>)}</select></label>
@@ -800,15 +810,6 @@ function Page() {
                 </section>
             )}
 
-            {links.length > 0 && (
-                <section className="movie-section">
-                    <div className="watch-links watch-links-content">
-                        {links.map(([name, url], index) => (
-                            <WatchLink key={`${name}:${url}`} url={url} title={movie.title} label={index === 0 ? "Watch Now" : `Watch option ${index + 1}`} />
-                        ))}
-                    </div>
-                </section>
-            )}
 
             {isSeries && tmdbMovie?.id && <SeriesSeasons seriesId={tmdbMovie.id} seasons={seasons} localSeasons={localSeasons} localIndex={episodeMovieIndex} />}
 

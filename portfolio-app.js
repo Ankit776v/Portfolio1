@@ -1,12 +1,17 @@
 const projects = {
-  movieshub: { name: 'Movieshub', react: true },
-  connecthub: { name: 'ConnectHub' },
-  shopsphere: { name: 'ShopSphere' },
-  sprintboard: { name: 'SprintBoard' },
-  gameshub: { name: 'Gameshub' },
+  movieshub: { name: 'Movieshub', icon: 'MoviesHub.png', react: true },
+  connecthub: { name: 'ConnectHub', icon: 'ConnectHub.png' },
+  shopsphere: { name: 'ShopSphere', icon: 'ShopSphere.png' },
+  sprintboard: { name: 'SprintBoard', icon: 'SprintBoard.png' },
+  gameshub: { name: 'Gameshub', icon: 'Gameshub.png' },
 };
 const site = document.querySelector('#site');
 const portfolioTitle = document.title;
+const favicon = document.querySelector('#portfolioFavicon');
+const portfolioIcon = '/icons/main.png';
+function setFavicon(slug) {
+  if (favicon) favicon.href = slug ? `/icons/${projects[slug].icon}` : portfolioIcon;
+}
 const view = document.createElement('section');
 view.id = 'projectView';
 view.hidden = true;
@@ -164,6 +169,7 @@ async function renderRoute({ card = null, pop = false } = {}) {
     if (!slug) {
       clearZoom(); view.hidden = true; site.classList.remove('hidden'); site.inert = false;
       document.title = portfolioTitle;
+      setFavicon(null);
       window.scrollTo({ top: portfolioScroll, behavior: 'instant' });
       lastCard?.focus({ preventScroll: true });
       const section = url.hash ? document.getElementById(decodeURIComponent(url.hash.slice(1))) : null;
@@ -174,6 +180,7 @@ async function renderRoute({ card = null, pop = false } = {}) {
     site.classList.add('hidden'); site.inert = true; view.hidden = false;
     view.querySelector('#activeProjectName').textContent = projects[slug].name;
     document.title = `${projects[slug].name} | ${portfolioTitle.split('|')[0].trim()}`;
+    setFavicon(slug);
     entry.host.hidden = false;
     active = slug;
     if (!entry.instance) {

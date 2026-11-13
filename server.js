@@ -58,8 +58,19 @@ async function createPortfolio({ database, env = process.env, startCatalogue = t
   const movieRequire = createRequire(path.join(__dirname, 'Movieshub/server/package.json'));
   const mongoose = database || movieRequire('mongoose');
   if (!database) {
-    if (!env.MONGODB_URI) throw new Error('Set MONGODB_URI in .env (local MongoDB or MongoDB Atlas).');
-    await mongoose.connect(env.MONGODB_URI, { serverSelectionTimeoutMS: 10000 });
+    const mongoUri = env.MONGODB_URI?.trim();
+    if (!mongoUri) {
+      throw new Error('MONGODB_URI is missing. Add it to the Render service environment (or .env locally), then restart the service.');
+    }
+    if (!/^mongodb(?:\+srv)?:\/\//i.test(mongoUri)) {
+      throw new Error('MONGODB_URI must start with mongodb:// or mongodb+srv://.');
+    }
+    try {
+      await mongoose.connect(mongoUri, { serverSelectionTimeoutMS: 15000 });
+    } catch (error) {
+      const reason = error?.message ? ` Details: ${error.message}` : '';
+      throw new Error(`Could not connect to MongoDB Atlas. Check the cluster host, database user/password, and Atlas Network Access IP allowlist. If the password contains special characters, URL-encode it.${reason}`);
+    }
   }
   let connect, shop, sprint, movies, games;
   try {
@@ -119,6 +130,7 @@ async function createPortfolio({ database, env = process.env, startCatalogue = t
     // Explicit public files only: never expose repositories, secrets or databases.
     app.get(['/', '/index.html'], (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
     app.get('/ankit-professional.png', (req, res) => res.sendFile(path.join(__dirname, 'ankit-professional.png')));
+    app.use('/icons', express.static(path.join(__dirname, 'icons'), { index: false, dotfiles: 'deny' }));
     app.use('/assets/projects', express.static(path.join(__dirname, 'assets/projects'), { index: false, dotfiles: 'deny' }));
     app.use((req, res) => res.status(404).send('Page not found.'));
     const server = http.createServer(app);
